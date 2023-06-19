@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #D9EAD3ff;
+}
+
+header{
+    background-color: #231111ff;
+    padding: 20px 40px;
+}
+
+a{
+    color: #D9EAD3ff;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+
+/*s
+--licorice: #231111ff;
+--honeydew: #D9EAD3ff;
+--battleship-gray: #898D82ff;
+*/
+
