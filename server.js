@@ -22,14 +22,43 @@ app.get('/', async (req,res)=>{
     }
 })
 
+app.get('/dashboard', async (req,res)=>{
+        try{
+            res.render('dashboard')
+        } catch(err){
+            res.json(err)
+        }  
+})
+
+
 app.get('/login', async (req,res)=>{   
     try{
-        res.render('login')
+        res.render('login');
     } catch(err){
         res.status(400).json(err)
     }
 })
 
+app.get('/signup', async (req,res)=>{   
+    try{
+        res.render('signup');
+    } catch(err){
+        res.status(400).json(err)
+    }
+})
+
+
+/*
+app.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  });
+*/
 
 app.listen(PORT, () => {
     console.log('Server listening on: http://localhost:' + PORT);
