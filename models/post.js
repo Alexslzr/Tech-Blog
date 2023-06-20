@@ -16,11 +16,11 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    contents: {
+    content: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    creator: {
+    user_id: {
     type: DataTypes.STRING,
     references: {
         model: "user",
@@ -43,4 +43,4 @@ Post.init(
   
 );
 
-module.exports = User;
+module.exports = Post;
