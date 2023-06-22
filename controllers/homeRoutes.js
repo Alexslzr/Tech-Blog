@@ -24,8 +24,8 @@ router.get('/', async (req,res)=>{
 })
 
 router.get('/dashboard', withAuth ,async (req,res)=>{
-        try{
-            res.render('dashboard', {
+        try{   
+            res.render('dashboardNew', {
                 logged_in: req.session.logged_in 
             })
         } catch(err){
@@ -33,6 +33,27 @@ router.get('/dashboard', withAuth ,async (req,res)=>{
         }  
 })
 
+router.get('/dashboard/new', withAuth ,async (req,res)=>{
+    try{
+        const post = await Post.findAll({
+            where:{
+                user_id: req.session.user_id
+            },
+            include: {
+                model: User,
+                attributes: ['username']}
+        });
+
+        const posts = post.map((postx) => postx.get({ plain: true }));
+        
+        res.render('dashboardNew', {
+            posts,
+            logged_in: req.session.logged_in 
+        })
+    } catch(err){
+        res.json(err)
+    }  
+})
 
 router.get('/login', async (req,res)=>{   
     try{

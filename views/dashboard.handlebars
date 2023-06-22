@@ -1,6 +1,15 @@
 
-
+{{#each posts as |post| }}
+<div class="my-4 mx-5 border border-black ">
+    <div class=" d-flex justify-content-between post align-items-center px-4 py-2 rounded-top">
+    <h2>{{title}}</h2>
+    <p>{{format_date date}}</p>
+    </div>
+</div>
+{{/each}}
 
 <div class=" d-flex justify-content-center align-items-end">
-    <button>+ New Post</button>
+    <button id="btn">+ New Post</button>
 </div>
+
+<script src="/js/dashboard.js"></script>
