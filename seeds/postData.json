@@ -1,0 +1,27 @@
+[
+    {
+        "title": "test1",
+        "content": "this is a test for a post 123",
+        "user_id": "1"
+    },
+    {
+        "title": "test2",
+        "content": "this is a newtest for a post 123",
+        "user_id": "1"
+    },
+    {
+        "title": "hello everyone",
+        "content": "this is a test for a post 123",
+        "user_id": "2"
+    },
+    {
+        "title": "test1",
+        "content": "this is a test for a post 123",
+        "user_id": "2"
+    },
+    {
+        "title": "teacher post",
+        "content": "this is a test made by the teacher",
+        "user_id": "3"
+    }
+]

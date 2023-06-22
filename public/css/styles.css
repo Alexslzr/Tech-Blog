@@ -30,7 +30,20 @@ a{
     border: solid 5px #231111ff;
 }
 
+#logout{
+    color: #D9EAD3ff;
+    background: none;
+    border: none;
+}
 
+.post{
+    background-color: #231111ff;
+    color: #D9EAD3ff;
+}
+
+#content{
+    border: 2px solid #231111ff;
+}
 
 /*s
 --licorice: #231111ff;

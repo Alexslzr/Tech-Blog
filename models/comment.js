@@ -25,8 +25,12 @@ Comment.init(
         key: "id",
       }
     },
+    comment: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     date: {
-        type: DataTypes.DATEONLY,
+        type: DataTypes.DATE,
         allowNull: false,
         defaultValue: DataTypes.NOW,
     }

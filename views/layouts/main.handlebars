@@ -14,17 +14,25 @@
     <header>
         <a href="/">Home</a>
         <a href="dashboard">Dashboard</a>
+        {{#if logged_in}} 
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
         <a href="login">Login</a>
-        <a href="logout">Logout</a>
+        {{/if}}
+        
+        
+        
         <div class="flex"> 
             <h1 class="p-2" id="title">The Tech Blog</h1>
         </div>
         
     </header>
-        
-    
     <main>
         {{{body}}}
     </main>
-    <script src="../../public/js/index.js"></script>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+    <script src="./js/index.js"></script>
 </body>

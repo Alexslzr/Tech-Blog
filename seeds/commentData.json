@@ -1,0 +1,14 @@
+[
+    {
+        "title": "test1",
+        "comment": "this is a test for a post 123",
+        "user_id": "1",
+        "post_id": "1"
+    },
+    {
+        "title": "test2",
+        "comment": "this is a test for post",
+        "user_id": "2",
+        "post_id": "1"
+    }
+]

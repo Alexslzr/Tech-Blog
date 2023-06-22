@@ -1,17 +1,33 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
+const { Post, User, Comment } = require('../models');
 
 
 router.get('/', async (req,res)=>{   
     try{
-        res.render('homepage')
+
+        const post = await Post.findAll({
+            include: {
+                model: User,
+                attributes: ['username']}
+        });
+
+        const posts = post.map((postx) => postx.get({ plain: true }));
+        
+        res.render('homepage', {
+            posts,
+            logged_in: req.session.logged_in 
+        })
     } catch(err){
         res.status(400).json(err)
     }
 })
 
-router.get('/dashboard', async (req,res)=>{
+router.get('/dashboard', withAuth ,async (req,res)=>{
         try{
-            res.render('dashboard')
+            res.render('dashboard', {
+                logged_in: req.session.logged_in 
+            })
         } catch(err){
             res.json(err)
         }  
@@ -34,17 +50,5 @@ router.get('/signup', async (req,res)=>{
     }
 })
 
-
-/*
-app.post('/logout', (req, res) => {
-    if (req.session.loggedIn) {
-      req.session.destroy(() => {
-        res.status(204).end();
-      });
-    } else {
-      res.status(404).end();
-    }
-  });
-*/
 
 module.exports = router;
