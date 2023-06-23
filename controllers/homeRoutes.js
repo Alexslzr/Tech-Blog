@@ -25,7 +25,19 @@ router.get('/', async (req,res)=>{
 
 router.get('/dashboard', withAuth ,async (req,res)=>{
         try{   
-            res.render('dashboardNew', {
+            const post = await Post.findAll({
+                where:{
+                    user_id: req.session.user_id
+                },
+                include: {
+                    model: User,
+                    attributes: ['username']}
+            });
+    
+            const posts = post.map((postx) => postx.get({ plain: true }));
+            
+            res.render('dashboard', {
+                posts,
                 logged_in: req.session.logged_in 
             })
         } catch(err){
@@ -61,6 +73,26 @@ router.get('/login', async (req,res)=>{
     } catch(err){
         res.status(400).json(err)
     }
+})
+
+router.get('/dashboard/edit/:id', withAuth ,async (req,res)=>{
+    try{
+        const post = await Post.findByPk(req.params.id, {
+            include: {
+                model: User,
+                attributes: ['username']}
+            });
+
+        const posts = post.get({ plain: true });
+
+
+        res.render('editpost', {
+            posts,
+            logged_in: req.session.logged_in 
+        })
+    } catch(err){
+        res.json(err)
+    }  
 })
 
 router.get('/signup', async (req,res)=>{   
