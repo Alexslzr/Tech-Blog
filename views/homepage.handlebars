@@ -1,7 +1,7 @@
 {{#each posts as |post| }}
 <div class="my-4 mx-5 border border-black ">
     <div class=" d-flex justify-content-between post align-items-center px-4 py-2 rounded-top">
-    <h2>{{title}}</h2>
+    <a href="/post/{{id}}"><h2>{{title}}</h2></a>
     <p>posted by {{user.username}} on {{format_date date}}</p>
     </div>
         <p id="content" class="p-3 rounded-bottom "> {{content}} </p>

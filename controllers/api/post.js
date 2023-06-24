@@ -17,7 +17,7 @@ router.post('/', withAuth ,async (req, res) => {
   });
 
   router.put('/:id', async (req, res) => {
-    // delete one product by its `id` value
+    // delete one post by its `id` value
     try{
       const post = await Post.update({
           title: req.body.title,
