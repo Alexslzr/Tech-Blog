@@ -128,9 +128,6 @@ router.get('/post/:id' ,withAuth, async (req,res)=>{
         const posts = post.get({ plain: true });
 
         const comments = com.map((comment) => comment.get({ plain: true }));
-
-        console.log(comments)
-
         res.render('comment', {
             comments,
             posts,

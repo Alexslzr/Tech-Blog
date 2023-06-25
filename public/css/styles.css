@@ -9,6 +9,11 @@ header{
     padding: 20px 40px;
 }
 
+button{
+    color: black;
+    background-color: black;
+}
+
 #title{
     color: #231111ff;
     background-color: #D9EAD3ff;
@@ -23,12 +28,10 @@ a{
 }
 
 #login{
-    border: solid 5px #231111ff;
+    border: solid 3px #231111ff;
+    border-radius: 5px;
 }
 
-#signup{
-    border: solid 5px #231111ff;
-}
 
 #logout{
     color: #D9EAD3ff;
@@ -44,6 +47,23 @@ a{
 #content{
     border: 2px solid #231111ff;
 }
+
+.page-title{
+    background-color: #231111ff;
+    color: #D9EAD3ff;
+}
+
+.box{
+    border: solid 5px #231111ff;
+    border-radius: 5px;
+}
+
+#btn{
+    color: #D9EAD3ff;
+    padding: 5px;
+    border-radius: 10px 5px;
+}
+
 
 /*s
 --licorice: #231111ff;

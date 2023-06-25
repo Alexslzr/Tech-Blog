@@ -1,7 +1,4 @@
-
-
 const btn = document.getElementById('post-comment');
-
 
 const postCommentHandler = async(event)=>{
 if (event.target.hasAttribute('data-id')) {
