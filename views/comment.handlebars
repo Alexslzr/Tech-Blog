@@ -11,7 +11,10 @@
     <div class=" d-flex justify-content-between post align-items-center px-4 py-2 rounded-top">
     <a href="/post/{{id}}"><h2>{{title}}</h2></a>
     </div>
-        <p id="content" class="p-3 rounded-bottom "> {{posts.comment.comment}} </p>
+    {{#each comments as |com|}}
+        <p  class="px-3 py-1 rounded-bottom "> {{com.comment}} </p>
+        <p  class="px-3 py-1 rounded-bottom "> --{{com.user.username}}, {{format_date date}} </p>
+     {{/each}} 
 </div>
 
 <div id="login" class="mt-5 mx-5 p-5"> 
