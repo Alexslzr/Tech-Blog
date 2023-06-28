@@ -6,7 +6,7 @@
     },
     {
         "title": "test2",
-        "content": "this is a newtest for a post 123",
+        "content": "this is a new test for a post",
         "user_id": "1"
     },
     {
@@ -21,7 +21,27 @@
     },
     {
         "title": "teacher post",
-        "content": "this is a test made by the teacher",
+        "content": "Create an MVP its a great start for any app",
         "user_id": "3"
+    },
+    {
+        "title": "teacher post",
+        "content": "Define your task before start your project",
+        "user_id": "3"
+    },
+    {
+        "title": "teacher post",
+        "content": "Review all your models before implementing anything",
+        "user_id": "3"
+    },
+    {
+        "title": "Frontend post",
+        "content": "this is a cool tip for frontend developing",
+        "user_id": "2"
+    },
+    {
+        "title": "Backend post",
+        "content": "this is a test made by the LuisDev",
+        "user_id": "2"
     }
 ]

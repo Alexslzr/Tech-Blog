@@ -14,6 +14,7 @@ router.get('/', async (req,res)=>{
 
         const posts = post.map((postx) => postx.get({ plain: true }));
         
+        console.log(posts)
         res.render('homepage', {
             posts,
             logged_in: req.session.logged_in 
@@ -138,34 +139,4 @@ router.get('/post/:id' ,withAuth, async (req,res)=>{
     }  
 })
 
-
-/*
-router.get('/post/:id' ,withAuth,async (req,res)=>{
-    try{
-        const post = await Post.findByPk(req.params.id, {
-            include: [{
-                model: User,
-                attributes: ['username']},
-            {
-                model: Comment,
-                attributes: ['comment','date'],
-                include:{
-                    model: User,
-                    attributes: ['username']
-                }},
-            ]});
-
-        const posts = post.get({ plain: true });
-
-        console.log(posts)
-
-        res.render('comment', {
-            posts,
-            logged_in: req.session.logged_in 
-        })
-    } catch(err){
-        res.json(err)
-    }  
-})
-*/
 module.exports = router;

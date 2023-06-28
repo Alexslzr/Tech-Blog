@@ -13,7 +13,6 @@ router.post('/:id', withAuth, async (req,res)=>{
 
     res.status(200).json(comments);
     } catch (err) {
-      console.log(err);
       res.status(500).json(err);
     }
 });

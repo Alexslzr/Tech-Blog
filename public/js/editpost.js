@@ -2,8 +2,9 @@
 
 const updatePostHandler = async (event) => {
     event.preventDefault();
-    if (event.target.hasAttribute('data-id')) {
+    if (event.target.hasAttribute('data-id')) { 
       const id = event.target.getAttribute('data-id');
+      
 
   
     const title = document.querySelector('#post-title').value.trim();

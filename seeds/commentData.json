@@ -1,14 +1,32 @@
 [
     {
         "title": "test1",
-        "comment": "this is a test for a post 123",
+        "comment": "this is a test to my post",
         "user_id": "1",
         "post_id": "1"
     },
     {
         "title": "test2",
-        "comment": "this is a test for post",
+        "comment": "this is a test for comment",
         "user_id": "2",
         "post_id": "1"
+    },
+    {
+        "title": "test2",
+        "comment": "cool start",
+        "user_id": "3",
+        "post_id": "1"
+    },
+    {
+        "title": "test2",
+        "comment": "i found this very useful!",
+        "user_id": "1",
+        "post_id": "6"
+    },
+    {
+        "title": "test2",
+        "comment": "thanks for the tip!",
+        "user_id": "2",
+        "post_id": "5"
     }
 ]
