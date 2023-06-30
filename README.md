@@ -60,7 +60,9 @@ The following animation demonstrates the application functionality:
 
 ## Links
 
+Github: <br> https://github.com/Alexslzr
+
 App: <br> https://pacific-bayou-28721-544ed386ada5.herokuapp.com/
 
-Github: <br> https://github.com/Alexslzr
+Repo: <br> https://github.com/Alexslzr/Tech-Blog
 

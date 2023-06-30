@@ -105,7 +105,7 @@ router.get('/signup', async (req,res)=>{
 
 router.get('/post/:id' ,withAuth, async (req,res)=>{
     try{
-        const com = await Comment.findAll(/*req.params.id,*/ {
+        const com = await Comment.findAll({
            include: {
                 model: User,
                 attributes: ['username']},
