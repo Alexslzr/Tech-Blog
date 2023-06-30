@@ -1,14 +1,14 @@
-<div class="my-4 mx-5 border border-black ">
-    <div class=" d-flex justify-content-between post align-items-center px-4 py-2 rounded-top">
+<div class="my-4 mx-5 box ">
+    <div class=" d-flex justify-content-between post align-items-center px-4 py-2 ">
     <a href="/post/{{id}}"><h2>{{posts.title}}</h2></a>
     <p>posted by {{posts.user.username}} on {{format_date posts.date}}</p>
     </div>
-        <p id="content" class="py-3 px-5 rounded-bottom "> {{posts.content}} </p>
+        <p class="py-3 px-5 "> {{posts.content}} </p>
 </div>
 
 {{#if comments.length}} 
 <div class="my-4 mx-5 box">
-    <div class=" d-flex justify-content-between post align-items-center px-4 py-2 rounded-top">
+    <div class=" d-flex justify-content-between post align-items-center px-4 py-2 ">
     
     <a href="/post/{{id}}"><h2>Box of comments</h2></a>
     
