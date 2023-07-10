@@ -18,9 +18,11 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
 ## Mock-Up
 
-The following animation demonstrates the application functionality:
+The following Image demonstrates actual look of the application:
+![Demonstrating image](./Assets/techblog.png) 
 
-![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./Assets/14-mvc-homework-demo-01.gif) 
+Login:
+![Demonstrating image](./Assets/login.png) 
 
 ## License
 
